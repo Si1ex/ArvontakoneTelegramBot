@@ -8,6 +8,7 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 bot = TeleBot(API_KEY)
 players = []
+bot.remove_webhook()
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -37,4 +38,4 @@ def pick_players(message):
     except (ValueError, IndexError):
         bot.send_message(message.chat.id, "Virheellinen syöte. Yritä uudelleen.")
 
-bot.polling()
+bot.polling(none_stop=True)
