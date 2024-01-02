@@ -18,14 +18,14 @@ Make sure you have the following prerequisites before running the script:
 
 Replace your_telegram_bot_api_key with the actual API key you obtained.
 
-##Usage
+## Usage
 
 Run the script using python script_name.py in the terminal.
 Start a conversation with the Telegram bot you created.
 Use the /start command to initiate the process and enter the names of the players separated by commas when prompted.
 After entering the player names, use the /pick X command to randomly select X players from the list.
 
-##Commands
+## Commands
 /start: Initiates the bot and prompts the user to enter player names.
 /pick X: Randomly selects X players from the entered list of names.
 Example
@@ -38,7 +38,7 @@ Bot: "4 players saved. Choose how many players to pick with the command /pick X,
 User: /pick 2
 Bot: "Randomly selected 2 players are:\nAlice\nJohn"
 
-##Notes
+## Notes
 
 The script handles errors such as invalid input or insufficient players gracefully.
 Ensure that the bot has the necessary permissions to read and send messages in the chat.
