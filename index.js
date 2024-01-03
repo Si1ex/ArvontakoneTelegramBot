@@ -9,9 +9,8 @@ const pythonBotScript = 'main.py';
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 
-  // Launch your Python bot when the server starts
-  const pythonBotProcess = exec(`python ${pythonBotScript}`);
-  
+  const pythonBotProcess = exec(`main.py ${pythonBotScript}`);
+
   pythonBotProcess.stdout.on('data', (data) => {
     console.log(`Bot stdout: ${data}`);
   });
