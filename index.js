@@ -4,10 +4,7 @@ const { exec } = require('child_process');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const pythonExecutable = 'main.py'; 
-
-const pythonBotProcess = exec(`${pythonExecutable} ${pythonBotScript}`);
-
+const pythonBotScript = 'main.py';
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
