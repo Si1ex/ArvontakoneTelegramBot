@@ -1,16 +1,17 @@
 const express = require('express');
 const { exec } = require('child_process');
+const crossEnv = require('cross-env');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 const pythonBotScript = 'main.py';
-const pythonExecutable = 'C:\\Python310\\python.exe';
+const pythonExecutable = 'C:\\Python310\\python.exe'; 
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 
-  const pythonBotProcess = exec(`${pythonExecutable} ${pythonBotScript}`);
+  const pythonBotProcess = exec(crossEnv(`"${pythonExecutable}" ${pythonBotScript}`));
 
   pythonBotProcess.stdout.on('data', (data) => {
     console.log(`Bot stdout: ${data}`);
