@@ -11,7 +11,7 @@ const pythonExecutable = 'C:\\Python310\\python.exe';
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 
-  const pythonBotProcess = exec(crossEnv(`"${pythonExecutable}" ${pythonBotScript}`));
+  const pythonBotProcess = exec(crossEnv([`${pythonExecutable}`, `${pythonBotScript}`]));
 
   pythonBotProcess.stdout.on('data', (data) => {
     console.log(`Bot stdout: ${data}`);
