@@ -44,3 +44,6 @@ The script handles errors such as invalid input or insufficient players graceful
 Ensure that the bot has the necessary permissions to read and send messages in the chat.
 The script utilizes the python-dotenv library to load the API key from the .env file for security reasons.
 Feel free to customize and modify the script according to your needs!
+
+## Author
+Daniel Kurhinen (and ChatGPT)
