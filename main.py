@@ -80,7 +80,7 @@ def reroll_players(message):
         try:
             if 0 < count <= len(players):
                 selected_players = random.sample(players, count)
-                bot.send_message(message.chat.id, f"{count} uudelleen valittua pelaajaa on:\n" + "\n" + "\n".join(selected_players) + "\n" + "\n" + "Jos haluat valita uudelleen, kirjoita komento /reroll. Jos haluat poistaa pelaajia listasta, kirjoita komento /delete ja pelaajien nimet välilyönnillä erotettuna.")
+                bot.send_message(message.chat.id, f"{count} uudelleen valittua pelaajaa on:\n" + "\n" + "\n".join(selected_players) + "\n" + "\n" + "Jos haluat arpoa uudelleen, kirjoita komento /reroll. Jos haluat poistaa pelaajia listasta, kirjoita komento /delete ja pelaajien nimet välilyönnillä erotettuna.")
             else:
                 bot.send_message(message.chat.id, "Virheellinen määrä pelaajia. Yritä uudelleen.")
         except (ValueError, IndexError):
